@@ -26,7 +26,7 @@ func main() {
 		log.Fatal("error", err)
 	}
 
-	//fmt.Println(GetById.ID)
+	fmt.Println(GetById.ID)
 
 	fmt.Println(GetAllCategory)
 }
