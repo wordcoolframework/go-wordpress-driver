@@ -1,6 +1,11 @@
-module go-wordpress-driver
+module github.com/wordcoolframework/go-wordpress-driver
 
 go 1.21.2
+
+require (
+	gorm.io/driver/mysql v1.5.7
+	gorm.io/gorm v1.25.12
+)
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
@@ -8,6 +13,4 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	golang.org/x/text v0.22.0 // indirect
-	gorm.io/driver/mysql v1.5.7 // indirect
-	gorm.io/gorm v1.25.12 // indirect
 )
