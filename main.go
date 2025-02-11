@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	wordpressdriver "go-wordpress-driver/wordpress_driver"
+	wordpressdriver "github.com/wordcoolframework/go-wordpress-driver/wordpress_driver"
 	"log"
 )
 
@@ -11,22 +11,11 @@ func main() {
 	err := wordpressdriver.DBConnection()
 
 	if err != nil {
-		log.Fatal("Faild Connection!")
+		log.Fatal("Failed Connection!")
 	}
 
-	post := wordpressdriver.Post{}
+	wp := wordpressdriver.WP
 
-	category := wordpressdriver.Category{}
-
-	GetById, err := post.GetPostByID(22, "wp")
-
-	GetAllCategory, err := category.GetAllCategories("wp")
-
-	if err != nil {
-		log.Fatal("error", err)
-	}
-
-	fmt.Println(GetById.ID)
-
-	fmt.Println(GetAllCategory)
+	posts, _ := wp.Post().GetPosts("wp")
+	fmt.Println(posts)
 }

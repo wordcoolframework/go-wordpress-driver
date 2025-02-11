@@ -9,6 +9,10 @@ type Category struct {
 	Description string `gorm:"column:description"`
 }
 
+func (w *WpFacade) Category() *Category {
+	return &Category{}
+}
+
 func (c *Category) GetAllCategories(prefixTable string) ([]Category, error) {
 	var categories []Category
 	pTable := prefixTable + "_terms"

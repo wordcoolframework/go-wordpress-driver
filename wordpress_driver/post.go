@@ -2,7 +2,7 @@ package wordpressdriver
 
 import (
 	"fmt"
-	"go-wordpress-driver/wordpress_driver/queries"
+	"github.com/wordcoolframework/go-wordpress-driver/wordpress_driver/queries"
 
 	"gorm.io/gorm"
 )
@@ -12,6 +12,10 @@ type Post struct {
 	Title   string `gorm:"column:post_title"`
 	Content string `gorm:"column:post_content"`
 	Status  string `gorm:"column:post_status"`
+}
+
+func (w *WpFacade) Post() *Post {
+	return &Post{}
 }
 
 func (p *Post) GetPosts(prefixTable string) ([]Post, error) {
