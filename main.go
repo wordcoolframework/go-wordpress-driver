@@ -7,9 +7,7 @@ import (
 )
 
 func main() {
-
 	err := wordpressdriver.DBConnection()
-
 	if err != nil {
 		log.Fatal("Failed Connection!")
 	}
