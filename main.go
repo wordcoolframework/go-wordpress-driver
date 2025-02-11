@@ -16,5 +16,6 @@ func main() {
 	wp := wordpressdriver.WP
 
 	posts, _ := wp.Post().GetPosts("wp")
+
 	fmt.Println(posts)
 }
